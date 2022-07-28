@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width" />
+		<link rel = "stylesheet" href="~/css/bootstrap.css" />
+		<title>Калькулятор</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm">
+					<form asp-controller="Home" method="post">
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" >Первое число</span>
+							</div>
+							<input name="left" type="text" class="form-control" ria-describedby="basic-addon1">
+						</div>
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" >Второе число</span>
+							</div>
+							<input name="right" type="text" class="form-control" aria-describedby="basic-addon1">
+						</div>
+						<ul class="list-inline">
+							<li class="list-inline-item"> <button asp-action="Sub"  type="submit" class="btn btn-warning">-</button></li>
+							<li class="list-inline-item"> <button asp-action="Mul" type="submit" class="btn btn-info">*</button></li>
+							<li class="list-inline-item"> <button asp-action="Div" type="submit" class="btn btn-light">/</button></li>
+							<li class="list-inline-item"> <button asp-action="Add" type="submit" class="btn btn-dark">+</button></li>
+						</ul>
+					</form>
+				</div>
+				<div class="col-sm">
+					<H5>Результат: <strong>@Model</strong> </H5>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

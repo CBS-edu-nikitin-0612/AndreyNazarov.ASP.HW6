@@ -1,0 +1,12 @@
+﻿@model Data
+@{
+    Layout = "_Layout";
+}
+<ul>
+    @foreach (var item in Model)
+    {
+        @Html.Raw("<li class='list-inline-item'>" + item + "</li>");
+    }
+</ul>
+
+
